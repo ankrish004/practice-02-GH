@@ -5,14 +5,14 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name:  lint
-              run: nmp run lint     
+              run: npm run lint     
     testing:
         runs-on: ubuntu-latest      
         steps:
             - name: get code
               uses: actions/checkout@v3
             - name: install depednds 
-              run: nmp ci 
+              run: npm ci 
             - name: test code 
               run: npm run test                    
     deploy:
@@ -21,7 +21,7 @@ jobs:
             - name: get code
               uses: actions/checkout@v3
             - name: install depednds 
-              run: nmp ci 
+              run: npm ci 
 
 
             - name: build code 
