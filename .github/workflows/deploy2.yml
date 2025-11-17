@@ -4,8 +4,13 @@ jobs:
     lint:
         runs-on: ubuntu-latest
         steps:
+            - name: get code
+              uses: actions/checkout@v3
+            - name: install depednds 
+              run: npm run ci
             - name:  lint
-              run: npm run lint     
+              run: npm run lint  
+
     testing:
         runs-on: ubuntu-latest      
         steps:
@@ -27,5 +32,5 @@ jobs:
             - name: build code 
               run: npm run build
             - name: Deploy code
-              run: echo  "deplying "
+              run: echo  "deploying... the code "
 
